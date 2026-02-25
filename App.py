@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+import streamlit as st
 debut_poules = datetime(2026,6,20)
 fin_poules = debut_poules + timedelta(days = 45)
 print(f"Début des poules le {debut_poules.strftime('%A %d %B')}.")

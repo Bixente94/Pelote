@@ -17,6 +17,6 @@ for jours in jours_parties:
    creneau_20 = jours + timedelta(hours = 20)
    creneaux.extend([creneau_19, creneau_20])
 for creneau in creneaux:   
-     print(creneau.strftime("%A %d %B à %Hh")) 
+     st.checkbox(creneau.strftime("%A %d %B à %Hh")) 
      
    

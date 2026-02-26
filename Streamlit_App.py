@@ -41,7 +41,7 @@ tout_ok = serie_ok and dispo_ok and champs_ok
 if not champs_ok :
   st.write("merci de remplir nom prénom et tel")
 if not serie_ok :
-  st.write("merci de sélectionner une série"
+  st.write("merci de sélectionner une série")
 if not dispo_ok :
   st.write(f"{len(disponibilités)} / 15 disponibilités cochées")
 

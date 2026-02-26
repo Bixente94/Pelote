@@ -22,6 +22,6 @@ st.write("page d’inscription")
 st.metric("total de creneaux :", len(creneaux))
           
 for creneau in creneaux:   
-     st.expander(st.checkbox(creneau.strftime("%A %d %B à %Hh"))) 
+     st.checkbox(creneau.strftime("%A %d %B à %Hh"))
      
    

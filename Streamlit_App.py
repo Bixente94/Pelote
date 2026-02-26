@@ -23,6 +23,9 @@ st.metric("total de creneaux :", len(creneaux))
 
 with st.expander("montrer les créneaux"):
   for creneau in creneaux:   
-     st.checkbox(creneau.strftime("%A %d %B à %Hh"))
-     
+     checkbox = st.checkbox(creneau.strftime("%A %d %B à %Hh"))
+     checkbox
+     dispos = []
+     if checkbox == True
+       dispos.append(creneau)
    

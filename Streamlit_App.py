@@ -32,9 +32,11 @@ with st.form("Formulaire d’inscription"):
     for creneau in creneaux:   
       label = creneau.strftime("%A %d %B à %Hh")
       dispos[creneau] = st.checkbox(label, key = creneau)
-        
-  submit = st.form_submit_button("Valider")
 
-if submit :
-    disponibilites = [date for date, coche in dispos.items() if coche]
-    st.write(disponibilites)
+  disponibilites = [date for date, coche in dispos.items() if coche]
+  champs_ok = nom.strip() != "" and prenom.strip() != "" and tel.strip() != ""
+  serie_ok = serie != "Série"
+  dispo_ok = len(disponibilites) >= 15
+  tout_ok = serie_ok dispo_ok champs_ok
+  submit = st.form_submit_button("Valider", disabled=not tout_ok)
+

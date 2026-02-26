@@ -36,5 +36,5 @@ with st.form("Formulaire d’inscription"):
   submit = st.form_submit_button("Valider")
 
 if submit :
-    disponibilites = [date for date, coche in dispos if coche)
+    disponibilites = [date for date, coche in dispos if coche]
     st.write(disponibilites)

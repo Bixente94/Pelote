@@ -21,7 +21,7 @@ st.title("Inscription tournoi Halsou 2026")
 st.write("page d’inscription")
 st.metric("total de creneaux :", len(creneaux))
 
-with st.expander("montrer les créneaux")
+with st.expander("montrer les créneaux"):
   for creneau in creneaux:   
      st.checkbox(creneau.strftime("%A %d %B à %Hh"))
      

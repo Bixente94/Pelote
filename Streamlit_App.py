@@ -20,23 +20,23 @@ st.title("Inscription tournoi Halsou 2026")
 st.write("page d’inscription")
 st.metric("total de creneaux :", len(creneaux))
 st.info("cochez au moins 15 reponses")
+
 #Formulaire
-with st.form("Formulaire d’inscription"):
-  nom = st.text_input("Nom")
-  prenom = st.text_input("Prénom")
-  tel = st.text_input("Numéro de téléphone")
-  serie = st.selectbox("Série", ["Série", "1ère série A", "1ère série B", "2ème série", "3ème série"])
+nom = st.text_input("Nom")
+prenom = st.text_input("Prénom")
+tel = st.text_input("Numéro de téléphone")
+serie = st.selectbox("Série", ["Série", "1ère série A", "1ère série B", "2ème série", "3ème série"])
 
-  dispos = {}
-  with st.expander("Disponibilités"):
-    for creneau in creneaux:   
-      label = creneau.strftime("%A %d %B à %Hh")
-      dispos[creneau] = st.checkbox(label, key = creneau)
+dispos = {}
+with st.expander("Disponibilités"): 
+ for creneau in creneaux:   
+   label = creneau.strftime("%A %d %B à %Hh")
+   dispos[creneau] = st.checkbox(label, key = creneau)
 
-  disponibilites = [date for date, coche in dispos.items() if coche]
-  champs_ok = nom.strip() != "" and prenom.strip() != "" and tel.strip() != ""
-  serie_ok = serie != "Série"
-  dispo_ok = len(disponibilites) >= 15
-  tout_ok = serie_ok, dispo_ok, champs_ok
-  submit = st.form_submit_button("Valider", disabled=not tout_ok)
+disponibilites = [date for date, coche in dispos.items() if coche]
+champs_ok = nom.strip() != "" and prenom.strip() != "" and tel.strip() != ""
+serie_ok = serie != "Série"
+dispo_ok = len(disponibilites) >= 15
+tout_ok = serie_ok and dispo_ok and champs_ok
+submit = st.button("Valider", disabled=not tout_ok)
 

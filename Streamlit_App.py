@@ -30,7 +30,7 @@ with st.form("Formulaire d’inscription"):
   dispos = {}
   with st.expander("Disponibilités"):
     for creneau in creneaux:   
-      label = creneau.strftime("%A %d %B à %Hh"))
+      label = creneau.strftime("%A %d %B à %Hh")
       dispos[creneau] = st.checkbox(label, key = creneau)
         
   submit = st.form_submit_button("Valider")

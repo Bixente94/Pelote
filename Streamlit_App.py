@@ -47,4 +47,4 @@ if not dispo_ok :
 
 submit = st.button("Valider", disabled=not tout_ok)
 if submit:
-  st.succes("Inscription envoyée")
+  st.success("Inscription envoyée")

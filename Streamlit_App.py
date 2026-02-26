@@ -20,8 +20,9 @@ for jours in jours_parties:
 st.title("Inscription tournoi Halsou 2026")
 st.write("page d’inscription")
 st.metric("total de creneaux :", len(creneaux))
-          
-for creneau in creneaux:   
+
+with st.expander("montrer les créneaux")
+  for creneau in creneaux:   
      st.checkbox(creneau.strftime("%A %d %B à %Hh"))
      
    

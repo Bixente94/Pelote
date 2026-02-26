@@ -11,8 +11,8 @@ jour_actuel = debut_poules
 creneaux = [] 
 while jour_actuel <= fin_poules:
   if jour_actuel.weekday() >= 2:
-   creneau_19 = jour_actuel.replace(hours = 19)
-   creneau_20 = jour_actuel.replace(hours = 20)
+   creneau_19 = jour_actuel.replace(hour = 19)
+   creneau_20 = jour_actuel.replace(hour = 20)
    creneaux.extend([creneau_19, creneau_20])
   jour_actuel += timedelta(days = 1)
 

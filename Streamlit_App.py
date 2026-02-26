@@ -10,7 +10,7 @@ jours_parties = []
 jour_actuel = debut_poules
 creneaux = [] 
 while jour_actuel <= fin_poules:
-  if jours.weektime() >= 2:
+  if jour_actuel.weekday() >= 2:
    creneau_19 = jours.replace(hours = 19)
    creneau_20 = jours.replace(hours = 20)
    creneaux.extend([creneau_19, creneau_20])

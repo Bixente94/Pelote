@@ -26,6 +26,6 @@ with st.expander("montrer les créneaux"):
      checkbox = st.checkbox(creneau.strftime("%A %d %B à %Hh"))
      checkbox
      dispos = []
-     if checkbox == True
+     if checkbox == True:
        dispos.append(creneau)
    

@@ -37,6 +37,6 @@ with st.form("Formulaire d’inscription"):
   champs_ok = nom.strip() != "" and prenom.strip() != "" and tel.strip() != ""
   serie_ok = serie != "Série"
   dispo_ok = len(disponibilites) >= 15
-  tout_ok = serie_ok dispo_ok champs_ok
+  tout_ok = serie_ok, dispo_ok, champs_ok
   submit = st.form_submit_button("Valider", disabled=not tout_ok)
 

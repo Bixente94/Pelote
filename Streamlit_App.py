@@ -43,7 +43,7 @@ if not champs_ok :
 if not serie_ok :
   st.write("merci de sélectionner une série")
 if not dispo_ok :
-  st.write(f"{len(disponibilités)} / 15 disponibilités cochées")
+  st.write(f"{len(disponibilites)} / 15 disponibilités cochées")
 
 submit = st.button("Valider", disabled=not tout_ok)
 

@@ -39,11 +39,11 @@ serie_ok = serie != "Série"
 dispo_ok = len(disponibilites) >= 15
 tout_ok = serie_ok and dispo_ok and champs_ok
 if not champs_ok :
-  st.write("merci de remplir nom prénom et tel")
+  st.write("merci de remplir Nom, Prénom et Numéro de téléphone")
 if not serie_ok :
   st.write("merci de sélectionner une série")
 if not dispo_ok :
-  st.write(f"{len(disponibilites)} / 15 disponibilités cochées")
+  st.write(f"{len(disponibilites)} / 15 disponibilités choisies")
 
 submit = st.button("Valider", disabled=not tout_ok)
 

@@ -15,8 +15,13 @@ creneaux = []
 for jours in jours_parties: 
    creneau_19 = jours + timedelta(hours = 19)
    creneau_20 = jours + timedelta(hours = 20)
-   creneaux.extend([creneau_19, creneau_20])
+   creneaux.extend([creneau_19, creneau_20]
+
+st.title("Inscription tournoi Halsou 2026")
+st.write("page d’inscription)
+st.metric("total de creneaux :", len(creneaux)
+          
 for creneau in creneaux:   
-     st.checkbox(creneau.strftime("%A %d %B à %Hh")) 
+     with st.expander(st.checkbox(creneau.strftime("%A %d %B à %Hh"))) 
      
    

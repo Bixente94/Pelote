@@ -18,8 +18,8 @@ for jours in jours_parties:
    creneaux.extend([creneau_19, creneau_20]
 
 st.title("Inscription tournoi Halsou 2026")
-st.write("page d’inscription)
-st.metric("total de creneaux :", len(creneaux)
+st.write("page d’inscription")
+st.metric("total de creneaux :", len(creneaux))
           
 for creneau in creneaux:   
      with st.expander(st.checkbox(creneau.strftime("%A %d %B à %Hh"))) 

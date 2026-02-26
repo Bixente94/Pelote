@@ -25,7 +25,7 @@ with st.form("Formulaire d’inscription"):
   nom = st.text_input("Nom")
   prenom = st.text_input("Prénom")
   tel = st.text_input("Numéro de téléphone")
-  serie = st.selectbox("Série", ["1ère série A", "1ère série B", "2ème série", "3ème série"])
+  serie = st.selectbox("Série", ["Série", "1ère série A", "1ère série B", "2ème série", "3ème série"])
 
   dispos = {}
   with st.expander("Disponibilités"):

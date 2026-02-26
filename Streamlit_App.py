@@ -46,4 +46,5 @@ if not dispo_ok :
   st.write(f"{len(disponibilites)} / 15 disponibilités choisies")
 
 submit = st.button("Valider", disabled=not tout_ok)
-
+if submit:
+  st.succes("Inscription envoyée")
